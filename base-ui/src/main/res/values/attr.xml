@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DpMaterialEditText">
+        <attr name="android:text" />
+        <attr name="android:enabled" />
+        <attr name="hasDropdown" format="boolean" />
+        <attr name="android:maxLength" />
+        <attr name="android:ellipsize" />
+        <attr name="android:inputType" />
+        <attr name="android:singleLine" />
+    </declare-styleable>
+
+    <declare-styleable name="DpIconTextLayout">
+        <attr name="icon" format="reference" />
+        <attr name="caption" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DpWarningMessage">
+        <attr name="warningMessage" format="reference|string" />
+    </declare-styleable>
+
+    <declare-styleable name="DpMaterialSwitch">
+        <attr name="android:text" />
+        <attr name="message" format="string" />
+    </declare-styleable>
+</resources>
