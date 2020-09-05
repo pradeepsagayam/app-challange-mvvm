@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion sdk.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion sdk.minSdkVersion
+        targetSdkVersion sdk.targetSdkVersion
+        versionCode appVersion.versionCode
+        versionName appVersion.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation libraries.kotlinLib
+    implementation libraries.androidSupportAnnotations
+    implementation libraries.rxAndroid
+
+    implementation unitTestLibraries.junit
+    implementation instrumentationTestLibraries.espressoCore
+    implementation instrumentationTestLibraries.espressoContrib
+    implementation instrumentationTestLibraries.espressoIntents
+    implementation instrumentationTestLibraries.espressoIdling
+    implementation instrumentationTestLibraries.rxIdler
+    implementation instrumentationTestLibraries.okhttpMockWebServer
+}
+
+androidExtensions {
+    experimental = true
+}

@@ -2,3 +2,4 @@ rootProject.name = "app-challenge-mvvm"
 include ':app'
 include ':base-ui'
 include ':network'
+include ':test-support'
