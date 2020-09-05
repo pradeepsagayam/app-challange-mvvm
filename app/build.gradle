@@ -63,6 +63,9 @@ dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation project(":base-ui")
+    implementation project(":movies-service")
+
     implementation libraries.kotlinLib
     implementation libraries.appCompat
     implementation libraries.androidMaterial
