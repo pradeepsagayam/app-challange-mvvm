@@ -11,9 +11,9 @@ ext.sdk = [
 ]
 
 ext.appDetails = [
-        applicationId: "com.cartrack.app.challenge"
+        applicationId: "com.dp.app.challenge"
 ]
 
 ext.testRunner = [
-        espressoRunner: "com.cartrack.app.EspressoTestRunner"
+        espressoRunner: "com.dp.app.EspressoTestRunner"
 ]

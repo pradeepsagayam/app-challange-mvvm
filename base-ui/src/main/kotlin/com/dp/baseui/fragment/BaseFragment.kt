@@ -10,8 +10,8 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.cartrack.baseui.BaseActivity
-import com.cartrack.baseui.R
+import com.dp.baseui.BaseActivity
+import com.dp.baseui.R
 
 abstract class BaseFragment : Fragment() {
 
