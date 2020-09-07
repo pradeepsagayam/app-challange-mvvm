@@ -10,12 +10,14 @@ class MoviesResultMapper @Inject constructor() {
         val movieData = MovieData(
             response.page,
             response.totalResults,
+            response.totalPages,
             response.results.map { movieDetail -> movieDetail.convert() })
 
         return Success(movieData)
     }
 
     private fun MoviesResponse.MovieDetails.convert(): MovieDetails {
+
         return MovieDetails(
             popularity,
             voteCount,
@@ -30,7 +32,7 @@ class MoviesResultMapper @Inject constructor() {
             title,
             voteAverage,
             overview,
-            releaseDate
+            releaseDate ?: ""
         )
     }
 }

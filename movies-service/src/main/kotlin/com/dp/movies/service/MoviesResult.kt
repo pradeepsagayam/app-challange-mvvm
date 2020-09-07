@@ -5,11 +5,12 @@ sealed class MoviesResult {
 
     data class Success(val movieData: MovieData) : MoviesResult()
 
-    object Failure : MoviesResult()
+    data class Failure(val throwable: Throwable) : MoviesResult()
 
     data class MovieData(
         val page: Int,
         val totalResults: Int,
+        val totalPages: Int,
         val moviesDetails: List<MovieDetails>
     )
 
@@ -17,10 +18,10 @@ sealed class MoviesResult {
         val popularity: Double,
         val voteCount: Int,
         val video: Boolean,
-        val posterPath: String,
+        val posterPath: String?,
         val id: Int,
         val adult: Boolean,
-        val backdropPath: String,
+        val backdropPath: String?,
         val originalLanguage: String,
         val originalTitle: String,
         val genreIds: List<Int>,

@@ -13,10 +13,10 @@ ext.versions = [
         constraintLayout : '1.1.3',
         room             : '2.2.1',
         design           : '28.0.0',
-        playServicesMaps : '17.0.0',
-        places           : '2.3.0',
+        glide            : '4.6.1',
         lifecycle        : '2.2.0',
         assistedInject   : '0.5.2',
+        paging           : '3.0.0-alpha04',
 
         junit            : '1.1.1',
         mockito          : '3.3.3',
@@ -49,13 +49,15 @@ ext.libraries = [
         constraintLayout         : "androidx.constraintlayout:constraintlayout:$versions.constraintLayout",
         room                     : "androidx.room:room-runtime:$versions.room",
         design                   : "com.android.support:design:$versions.design",
-        playServicesMaps         : "com.google.android.gms:play-services-maps:$versions.playServicesMaps",
-        places                   : "com.google.android.libraries.places:places:$versions.places",
         viewModel                : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle",
         livedata                 : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle",
         lifecycleRunTime         : "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycle",
         savedState               : "androidx.lifecycle:lifecycle-viewmodel-savedstate:$versions.lifecycle",
         assistedInject           : "com.squareup.inject:assisted-inject-annotations-dagger2:$versions.assistedInject",
+        glide                    : "com.github.bumptech.glide:glide:$versions.glide",
+        pagingCommon             : "androidx.paging:paging-common-ktx:$versions.paging",
+        pagingRunTime            : "androidx.paging:paging-runtime-ktx:$versions.paging",
+        rxPaging                 : "androidx.paging:paging-rxjava2:$versions.paging"
 ]
 
 ext.compilers = [
@@ -64,6 +66,7 @@ ext.compilers = [
         room          : "androidx.room:room-compiler:$versions.room",
         lifecycle     : "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle",
         assistedInject: "com.squareup.inject:assisted-inject-processor-dagger2:$versions.assistedInject",
+        glide         : "com.github.bumptech.glide:compiler:$versions.glide",
 ]
 
 ext.unitTestLibraries = [

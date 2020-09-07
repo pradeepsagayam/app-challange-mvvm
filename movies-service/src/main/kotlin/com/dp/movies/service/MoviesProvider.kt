@@ -1,7 +1,7 @@
 package com.dp.movies.service
 
 import com.dp.network.NetworkConfiguration
-import io.reactivex.Observable
+import io.reactivex.Single
 import javax.inject.Inject
 
 class MoviesProvider @Inject constructor(
@@ -10,11 +10,12 @@ class MoviesProvider @Inject constructor(
     private val moviesResultMapper: MoviesResultMapper
 ) {
 
-    fun getMovies(query: String, page: Int): Observable<MoviesResult> {
+    fun getMovies(query: String, page: Int): Single<MoviesResult> {
         return moviesService.getMovies(networkConfiguration.getApiKey(), query, page)
+            .singleOrError()
             .map { response ->
                 moviesResultMapper.mapFrom(response) as MoviesResult
             }
-            .onErrorReturn { MoviesResult.Failure }
+            .onErrorReturn { throwable -> MoviesResult.Failure(throwable) }
     }
 }

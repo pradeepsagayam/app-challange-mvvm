@@ -10,4 +10,6 @@
     <dimen name="button_height">@dimen/card_min_height</dimen>
     <dimen name="card_min_height">60dp</dimen>
     <dimen name="card_rounded_corner_radius">3dp</dimen>
+    <dimen name="card_rounded_corner_margin">10dp</dimen>
+    <dimen name="button_rounded_corner_radius">3dp</dimen>
 </resources>

@@ -322,7 +322,7 @@ class AlertDialogFactory @Inject constructor() {
             titleTextView
                 .setTextSize(
                     TypedValue.COMPLEX_UNIT_PX,
-                    context.resources.getDimension(R.dimen.text_size_h2)
+                    context.resources.getDimension(R.dimen.h2)
                 )
             titleTextView.maxLines = 3
             titleTextView.typeface = ResourcesCompat.getFont(
@@ -339,13 +339,11 @@ class AlertDialogFactory @Inject constructor() {
             messageTextView
                 .setTextSize(
                     TypedValue.COMPLEX_UNIT_PX,
-                    context.resources.getDimension(R.dimen.text_size_h3)
+                    context.resources.getDimension(R.dimen.h3)
                 )
-            messageTextView.setTypeface(
-                ResourcesCompat.getFont(
-                    context,
-                    R.font.nova_regular
-                )
+            messageTextView.typeface = ResourcesCompat.getFont(
+                context,
+                R.font.nova_regular
             )
         }
     }

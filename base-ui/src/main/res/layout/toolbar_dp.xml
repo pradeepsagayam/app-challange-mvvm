@@ -13,12 +13,12 @@
         android:fitsSystemWindows="true"
         android:gravity="center"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/CtToolbarStyle"
+        android:theme="@style/DpToolbarStyle"
         app:navigationContentDescription="Navigate up">
 
         <TextView
             android:id="@+id/toolbar_title"
-            style="@style/CtToolBarTitle"
+            style="@style/DpToolBarTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

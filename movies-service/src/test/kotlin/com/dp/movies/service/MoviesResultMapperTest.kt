@@ -20,6 +20,7 @@ class MoviesResultMapperTest {
 
         assertThat(actual.movieData.page).isEqualTo(1)
         assertThat(actual.movieData.totalResults).isEqualTo(100)
+        assertThat(actual.movieData.totalPages).isEqualTo(10)
         assertThat(actual.movieData.moviesDetails)
             .extracting(
                 "popularity",
@@ -73,6 +74,7 @@ class MoviesResultMapperTest {
         return MoviesResponse(
             1,
             100,
+            10,
             listOf(getMovieDetails(1), getMovieDetails(2))
         )
     }

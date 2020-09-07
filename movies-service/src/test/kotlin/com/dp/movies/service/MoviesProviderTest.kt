@@ -64,11 +64,13 @@ class MoviesProviderTest {
 
     @Test
     fun getUserDetails_givenErrorResponse_returnFailureResult() {
+        val throwable = Throwable()
         `when`(moviesService.getMovies("apiKey", "query", 1))
-            .thenReturn(Observable.error(Throwable()))
+            .thenReturn(Observable.error(throwable))
 
         val actual = subject.getMovies("query", 1).test()
 
         actual.assertValue { result -> result is MoviesResult.Failure }
+        actual.assertValue { result -> (result as MoviesResult.Failure).throwable == throwable }
     }
 }

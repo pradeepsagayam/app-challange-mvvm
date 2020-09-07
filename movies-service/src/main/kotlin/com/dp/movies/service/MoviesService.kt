@@ -2,6 +2,7 @@ package com.dp.movies.service
 
 import com.dp.movies.service.model.MoviesResponse
 import io.reactivex.Observable
+import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
 

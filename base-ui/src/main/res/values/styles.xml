@@ -13,7 +13,7 @@
         <item name="android:statusBarColor">@color/bright_blue</item>
     </style>
 
-    <style name="CtToolbarStyle" parent="ThemeOverlay.AppCompat.Light">
+    <style name="DpToolbarStyle" parent="ThemeOverlay.AppCompat.Light">
         <item name="colorControlNormal">@color/white</item>
         <item name="android:background">@color/blue</item>
         <item name="android:navigationIcon">@drawable/ic_backbutton</item>

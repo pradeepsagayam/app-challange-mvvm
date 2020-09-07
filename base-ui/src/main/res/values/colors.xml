@@ -8,4 +8,9 @@
     <color name="black">#2c2c2c</color>
     <color name="error_text">#ff0000</color>
     <color name="dark_yellow">#af8f62</color>
+    <color name="medium_grey">#999999</color>
+    <color name="button_pressed">#0c234c</color>
+    <color name="loading_transparent_background">#ccffffff</color>
+    <color name="background_grey">#e6e6e6</color>
+    <color name="pale_grey">#f0f0f0</color>
 </resources>

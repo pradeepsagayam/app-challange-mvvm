@@ -7,6 +7,7 @@ data class MoviesResponse(
     @SerializedName("total_results")
     val totalResults: Int,
     @SerializedName("total_pages")
+    val totalPages: Int,
     val results: List<MovieDetails>
 ) {
     data class MovieDetails(
@@ -15,11 +16,11 @@ data class MoviesResponse(
         val voteCount: Int,
         val video: Boolean,
         @SerializedName("poster_path")
-        val posterPath: String,
+        val posterPath: String?,
         val id: Int,
         val adult: Boolean,
         @SerializedName("backdrop_path")
-        val backdropPath: String,
+        val backdropPath: String?,
         @SerializedName("original_language")
         val originalLanguage: String,
         @SerializedName("original_title")
@@ -31,6 +32,6 @@ data class MoviesResponse(
         val voteAverage: Double,
         val overview: String,
         @SerializedName("release_date")
-        val releaseDate: String
+        val releaseDate: String?
     )
 }
