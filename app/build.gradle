@@ -79,13 +79,15 @@ dependencies {
     implementation libraries.rxBinding
     implementation libraries.constraintLayout
     implementation libraries.design
-    implementation libraries.playServicesMaps
-    implementation libraries.places
     implementation libraries.viewModel
     implementation libraries.livedata
     implementation libraries.lifecycleRunTime
     implementation libraries.savedState
     implementation libraries.assistedInject
+    implementation libraries.glide
+    implementation libraries.pagingCommon
+    implementation libraries.pagingRunTime
+    implementation libraries.rxPaging
 
     kapt compilers.dagger
     kapt compilers.daggerAndroid

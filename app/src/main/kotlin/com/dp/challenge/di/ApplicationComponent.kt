@@ -1,10 +1,9 @@
 package com.dp.challenge.di
 
 import com.dp.challenge.AppChallengeApplication
-import com.squareup.inject.assisted.dagger2.AssistedModule
+import com.dp.challenge.movielist.MovieListActivity
 import dagger.BindsInstance
 import dagger.Component
-import dagger.Module
 import dagger.android.AndroidInjectionModule
 import javax.inject.Singleton
 
@@ -29,6 +28,8 @@ interface ApplicationComponent {
     }
 
     fun inject(appChallengeApplication: AppChallengeApplication)
+
+    fun inject(movieListActivity: MovieListActivity)
 
 }
 
