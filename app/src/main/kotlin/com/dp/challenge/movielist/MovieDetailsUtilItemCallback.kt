@@ -1,6 +1,7 @@
 package com.dp.challenge.movielist
 
 import androidx.recyclerview.widget.DiffUtil.ItemCallback
+import com.dp.challenge.movielist.item.MovieListItemDataModel
 import javax.inject.Inject
 
 class MovieDetailsUtilItemCallback @Inject constructor() : ItemCallback<MovieListItemDataModel>() {

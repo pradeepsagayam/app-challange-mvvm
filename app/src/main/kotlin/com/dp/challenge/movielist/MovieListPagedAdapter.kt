@@ -5,6 +5,8 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.dp.challenge.databinding.ItemMovieListViewBinding
+import com.dp.challenge.movielist.item.MovieListItemDataModel
+import com.dp.challenge.movielist.item.MovieListItemViewHolder
 import javax.inject.Inject
 
 class MovieListPagedAdapter @Inject constructor(
@@ -17,7 +19,9 @@ class MovieListPagedAdapter @Inject constructor(
             parent,
             false
         )
-        return MovieListItemViewHolder(binding)
+        return MovieListItemViewHolder(
+            binding
+        )
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {

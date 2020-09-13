@@ -1,5 +1,6 @@
 package com.dp.challenge.movielist;
 
+import com.dp.challenge.movielist.item.MovieListItemDataModel;
 import com.dp.movies.service.MoviesResult.MovieDetails;
 
 import java.util.ArrayList;

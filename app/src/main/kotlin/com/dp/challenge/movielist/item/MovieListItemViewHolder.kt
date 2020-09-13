@@ -1,4 +1,4 @@
-package com.dp.challenge.movielist
+package com.dp.challenge.movielist.item
 
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide

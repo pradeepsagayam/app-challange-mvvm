@@ -5,7 +5,7 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.rxjava2.RxPagingSource
 import androidx.paging.rxjava2.flowable
-import com.dp.movies.service.MoviesResult.MovieDetails
+import com.dp.challenge.movielist.item.MovieListItemDataModel
 import io.reactivex.Flowable
 import javax.inject.Inject
 
