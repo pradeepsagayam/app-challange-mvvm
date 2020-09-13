@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/genericErrorContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:paddingTop="100dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/genericErrorTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:fontFamily="@font/serial_medium"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:text="@string/generic_error_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/genericErrorSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/serial_medium"
+        android:padding="15dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:text="@string/generic_error_sub_title" />
+</LinearLayout>

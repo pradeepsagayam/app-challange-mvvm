@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/searchValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nova_semibold"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        android:textSize="18sp"
+        tools:text="Batman" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/medium_grey"
+        android:layout_height="1dp" />
+
+</LinearLayout>

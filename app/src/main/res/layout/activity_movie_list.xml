@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
+        <variable
+            name="movieListViewModel"
+            type="com.dp.challenge.movielist.MovieListViewModel" />
+
+        <variable
+            name="movieListViewState"
+            type="com.dp.challenge.movielist.MovieListViewState" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background_grey"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:context=".movielist.MovieListActivity">
 
-        <include layout="@layout/toolbar_dp" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:gravity="center"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/DpToolbarStyle"
+            app:navigationContentDescription="Navigate up">
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:iconifiedByDefault="false"
+                android:queryHint="@string/search_view_hint" />
+        </androidx.appcompat.widget.Toolbar>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/moviesRecyclerView"
@@ -21,7 +48,9 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="15dp"
-            android:background="@color/background_grey" />
+            android:background="@color/background_grey"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
+        <include layout="@layout/movie_list_error" />
     </LinearLayout>
 </layout>
