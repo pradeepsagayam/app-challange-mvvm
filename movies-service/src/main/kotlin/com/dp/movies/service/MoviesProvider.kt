@@ -14,7 +14,11 @@ class MoviesProvider @Inject constructor(
         return moviesService.getMovies(networkConfiguration.getApiKey(), query, page)
             .singleOrError()
             .map { response ->
-                moviesResultMapper.mapFrom(response) as MoviesResult
+                if (response.results.isNullOrEmpty()) {
+                    MoviesResult.Failure(Throwable())
+                } else {
+                    moviesResultMapper.mapFrom(response) as MoviesResult
+                }
             }
             .onErrorReturn { throwable -> MoviesResult.Failure(throwable) }
     }

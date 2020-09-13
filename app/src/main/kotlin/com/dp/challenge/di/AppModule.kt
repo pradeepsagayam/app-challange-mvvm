@@ -1,9 +1,13 @@
 package com.dp.challenge.di
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.paging.rxjava2.RxPagingSource
 import com.dp.challenge.movielist.*
+import com.dp.challenge.movielist.item.MovieListItemDataModel
+import com.dp.db.search.di.RecentSearchDatabaseLibrary
+import com.dp.db.search.repository.RecentSearchRepository
 import com.dp.movies.service.di.MoviesApiLibrary
 import com.dp.network.NetworkConfiguration
 import dagger.Binds
@@ -45,6 +49,19 @@ abstract class AppModule {
             networkConfiguration: NetworkConfiguration
         ) =
             MoviesApiLibrary(retrofit, networkConfiguration)
+
+        @Provides
+        @JvmStatic
+        fun providesRecentSearchDatabaseLibrary(context: Context): RecentSearchDatabaseLibrary {
+            return RecentSearchDatabaseLibrary(context)
+        }
+
+        @Provides
+        @JvmStatic
+        fun providesRecentSearchRepository(recentSearchDatabaseLibrary: RecentSearchDatabaseLibrary): RecentSearchRepository {
+            return recentSearchDatabaseLibrary.recentSearchRepository()
+        }
+
     }
 
     @Target(AnnotationTarget.FUNCTION)

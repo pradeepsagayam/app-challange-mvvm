@@ -1,6 +1,10 @@
 <resources>
     <string name="title_movie_list">Movies</string>
     <string name="okay">Okay</string>
+    <string name="search_view_hint">Enter Movie Name</string>
+    <string name="generic_error_title">No Movies found</string>
+    <string name="generic_error_sub_title">Please enter a valid movie name to continue</string>
     <string name="leave">Leave</string>
+    <string name="search">Search</string>
     <string name="stay">Stay</string>
 </resources>

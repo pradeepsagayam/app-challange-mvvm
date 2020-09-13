@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="blue">#00266b</color>
+    <color name="blue">#3F51B5</color>
+    <color name="colorAccent">#3F51B5</color>
+    <color name="blueDark">#303F9F</color>
     <color name="light_blue">#12447d</color>
     <color name="white">#ffffff</color>
     <color name="bright_blue">#095aee</color>
     <color name="dark_grey">#666666</color>
     <color name="black">#2c2c2c</color>
+    <color name="secondaryTextColor">#657786</color>
+    <color name="full_black">#000000</color>
     <color name="error_text">#ff0000</color>
     <color name="dark_yellow">#af8f62</color>
     <color name="medium_grey">#999999</color>
+    <color name="iconColor">#657786</color>
+    <color name="dividerColor">#657786</color>
+    <color name="suggestionIconColor">#657786</color>
+    <color name="suggestionTextColor">#657786</color>
+    <color name="suggestionSelectedTextColor">#212121</color>
     <color name="button_pressed">#0c234c</color>
     <color name="loading_transparent_background">#ccffffff</color>
     <color name="background_grey">#e6e6e6</color>

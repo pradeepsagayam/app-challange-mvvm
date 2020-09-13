@@ -65,6 +65,7 @@ dependencies {
 
     implementation project(":base-ui")
     implementation project(":movies-service")
+    implementation project(":recent-search-database")
 
     implementation libraries.kotlinLib
     implementation libraries.appCompat

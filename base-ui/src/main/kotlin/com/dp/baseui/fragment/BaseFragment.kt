@@ -31,7 +31,7 @@ abstract class BaseFragment : Fragment() {
     }
 
     protected fun showCtLoadingDialog() {
-        (requireActivity() as BaseActivity).showCtLoadingDialog()
+        (requireActivity() as BaseActivity).showLoadingDialog()
     }
 
     protected fun showNonCancellableCtLoadingDialog() {
@@ -39,7 +39,7 @@ abstract class BaseFragment : Fragment() {
     }
 
     protected fun hideCtLoadingDialog() {
-        (requireActivity() as BaseActivity).hideCtLoadingDialog()
+        (requireActivity() as BaseActivity).hideLoadingDialog()
     }
 
     override fun onCreateView(

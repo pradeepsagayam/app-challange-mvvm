@@ -17,13 +17,17 @@ ext.versions = [
         lifecycle        : '2.2.0',
         assistedInject   : '0.5.2',
         paging           : '3.0.0-alpha04',
+        recyclerView     : '1.1.0',
+        adapster         : "1.0.13",
+        cardView         : "1.0.0",
 
         junit            : '1.1.1',
         mockito          : '3.3.3',
         assertj          : '3.16.1',
         espresso         : '3.2.0',
         rxIdler          : '0.11.0',
-        coreTesting      : '1.1.1'
+        coreTesting      : '1.1.1',
+        testRunner       : "1.2.0"
 ]
 
 ext.libraries = [
@@ -42,6 +46,9 @@ ext.libraries = [
         daggerAndroidSupport     : "com.google.dagger:dagger-android-support:$versions.dagger",
         gson                     : "com.google.code.gson:gson:$versions.gson",
 
+        cardView                 : "androidx.cardview:cardview:$versions.cardView",
+        adapster                 : "com.arthurivanets.adapster:adapster:$versions.adapster",
+        recyclerView             : "androidx.recyclerview:recyclerview:$versions.recyclerView",
         rxBindingSupport         : "com.jakewharton.rxbinding2:rxbinding-support-v4:$versions.rxBinding",
         rxBindingAppCompat       : "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:$versions.rxBinding",
         rxBindingRecyclerView    : "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:$versions.rxBinding",
@@ -85,4 +92,5 @@ ext.instrumentationTestLibraries = [
         okhttpMockWebServer: "com.squareup.okhttp3:mockwebserver:$versions.okhttp",
         rxIdler            : "com.squareup.rx.idler:rx2-idler:$versions.rxIdler",
         androidxRoomTesting: "androidx.room:room-testing:$versions.room",
+        testRunner         : "androidx.test:runner:$versions.testRunner"
 ]

@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.TextView
 import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
 import androidx.appcompat.app.ActionBar
@@ -26,7 +25,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     lateinit var viewDataBinding: ViewDataBinding
 
-    private val ctLoadingDialog: DpLoadingDialog = DpLoadingDialog.newInstance()
+    private val loadingDialog: DpLoadingDialog = DpLoadingDialog.newInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,7 +71,6 @@ abstract class BaseActivity : AppCompatActivity() {
         val actionBar = supportActionBar
         if (actionBar != null) {
             actionBar.title = null
-            setupToolbarTitle(toolbar)
             setupNavigationButton(actionBar)
         }
     }
@@ -93,31 +91,21 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
-    private fun setupToolbarTitle(toolbar: Toolbar) {
-        val toolbarTitleView = toolbar.findViewById<TextView>(R.id.toolbar_title)
-        if (toolbarTitle != 0) {
-            toolbarTitleView.text = getString(toolbarTitle)
-        } else {
-            toolbarTitleView.text = null
-        }
-    }
-
-    fun showCtLoadingDialog() {
-        showCtLoadingDialog(true)
+    fun showLoadingDialog() {
+        showLoadingDialog(true)
     }
 
     fun showNonCancellableCtLoadingDialog() {
-        showCtLoadingDialog(false)
+        showLoadingDialog(false)
     }
 
-    fun showCtLoadingDialog(isCancelable: Boolean) {
-        hideCtLoadingDialog()
-        ctLoadingDialog.show(this)
-        ctLoadingDialog.isCancelable = isCancelable
+    fun showLoadingDialog(isCancelable: Boolean) {
+        loadingDialog.show(this)
+        loadingDialog.isCancelable = isCancelable
     }
 
-    fun hideCtLoadingDialog() {
-        if (ctLoadingDialog.isVisible)
-            ctLoadingDialog.dismissAllowingStateLoss()
+    fun hideLoadingDialog() {
+        if(loadingDialog.isAdded)
+        loadingDialog.dismissAllowingStateLoss()
     }
 }
