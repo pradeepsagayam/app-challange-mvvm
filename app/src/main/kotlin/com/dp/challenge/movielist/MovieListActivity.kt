@@ -65,7 +65,6 @@ class MovieListActivity : BaseActivity(),
     }
 
     override fun onQueryTextSubmit(query: String?): Boolean {
-        searchView.postDelayed({ hideKeyboard() }, 500)
         movieListViewModel.getMovies(query)
         return true
     }
@@ -82,7 +81,6 @@ class MovieListActivity : BaseActivity(),
     }
 
     override fun onSearchItemClick(query: String) {
-        searchView.postDelayed({ hideKeyboard() }, 500)
         searchView.setQuery(query, true)
     }
 
@@ -124,6 +122,7 @@ class MovieListActivity : BaseActivity(),
                 genericErrorContainer.visibility = GONE
                 moviesRecyclerView.visibility = VISIBLE
             }
+            searchView.postDelayed({ hideKeyboard() }, 100)
         }
     }
 }
